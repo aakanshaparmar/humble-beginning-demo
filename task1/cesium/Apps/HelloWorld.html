@@ -36,7 +36,20 @@
               }
     });
 
-    viewer.zoomTo(wyoming);
+   
+
+    var circle = viewer.entities.add({
+       position: Cesium.Cartesian3.fromDegrees(-95.0, 40.0, 100000.0),
+    name : 'Blue translucent, rotated, and extruded ellipse with outline',
+    ellipse : {
+        semiMinorAxis : 150000.0,
+        semiMajorAxis : 150000.0,
+         height: 200000.0,
+        material : Cesium.Color.GREEN
+    }
+});
+
+     viewer.zoomTo(viewer.entities);
   </script>
 </body>
 </html>
